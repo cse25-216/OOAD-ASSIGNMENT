@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controllers.InterestController"
+      alignment="CENTER"
+      spacing="25"
+      style="-fx-background-color:#F8F5F8; -fx-padding:40;">
+
+    <Label text="Interest Calculation"
+           style="-fx-font-size:28px; -fx-font-weight:bold; -fx-text-fill:#8D285D;" />
+
+    <Label fx:id="interestMessageLabel"
+           style="-fx-font-size:18px; -fx-text-fill:#70445E;"
+           alignment="CENTER" />
+
+    <Button text="Apply Interest"
+            fx:id="applyInterestButton"
+            onAction="#applyInterest"
+            prefWidth="230" prefHeight="40"
+            style="-fx-background-color:#8D285D; -fx-text-fill:white;
+                   -fx-font-size:16px; -fx-background-radius:10;" />
+
+    <Button text="Back"
+            onAction="#goBack"
+            prefWidth="180" prefHeight="38"
+            style="-fx-background-color:#FFF0F5; -fx-text-fill:#8D285D;
+                   -fx-border-color:#E8D3DF; -fx-border-radius:10;
+                   -fx-background-radius:10; -fx-font-size:14px;" />
+
+</VBox>

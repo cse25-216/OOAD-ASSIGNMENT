@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/25"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.AdminDashboardController"
+            prefWidth="620"
+            prefHeight="645"
+            style="-fx-background-color: #F8F5F8;">
+
+    <top>
+        <HBox alignment="CENTER_LEFT"
+              prefHeight="64"
+              spacing="15"
+              style="-fx-background-color: white; -fx-padding: 10 25; -fx-border-color: #F0E4EC; -fx-border-width: 0 0 1 0;">
+
+            <VBox spacing="2">
+                <Label text="SASHA BANK"
+                       style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #8D285D;" />
+
+                <Label text="ADMINISTRATION"
+                       style="-fx-font-size: 10px; -fx-text-fill: #A77B94;" />
+            </VBox>
+
+            <VBox alignment="CENTER_RIGHT"
+                  HBox.hgrow="ALWAYS"
+                  spacing="2">
+
+                <Label text="ADMIN PORTAL"
+                       style="-fx-font-size: 10px; -fx-font-weight: bold; -fx-text-fill: #A77B94;" />
+
+                <Label text="Management Dashboard"
+                       style="-fx-font-size: 11px; -fx-text-fill: #563B4D;" />
+            </VBox>
+
+        </HBox>
+    </top>
+
+    <center>
+        <StackPane alignment="TOP_CENTER"
+                   style="-fx-padding: 24 20;">
+
+            <VBox alignment="TOP_CENTER"
+                  spacing="16"
+                  maxWidth="480">
+
+                <VBox spacing="5"
+                      maxWidth="480"
+                      style="-fx-background-color: #8D285D; -fx-background-radius: 12; -fx-padding: 17 20;">
+
+                    <Label text="ADMIN DASHBOARD"
+                           style="-fx-font-size: 10px; -fx-font-weight: bold; -fx-text-fill: #F8DCEB;" />
+
+                    <Label text="Welcome, Administrator"
+                           style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: white;" />
+
+                    <Label text="Manage customer and company registrations."
+                           wrapText="true"
+                           style="-fx-font-size: 11px; -fx-text-fill: #FFE1EE;" />
+
+                </VBox>
+
+                <VBox spacing="14"
+                      maxWidth="480"
+                      style="-fx-background-color: white; -fx-background-radius: 12; -fx-padding: 20; -fx-border-color: #F0E4EC; -fx-border-radius: 12;">
+
+                    <VBox spacing="4">
+                        <Label text="ACCOUNT MANAGEMENT"
+                               style="-fx-font-size: 15px; -fx-font-weight: bold; -fx-text-fill: #432C3B;" />
+
+                        <Label text="Choose an administrative action."
+                               style="-fx-font-size: 11px; -fx-text-fill: #98758A;" />
+                    </VBox>
+
+                    <VBox spacing="8"
+                          style="-fx-background-color: #FFF9FC; -fx-background-radius: 9; -fx-padding: 13; -fx-border-color: #F0E4EC; -fx-border-radius: 9;">
+
+                        <Label text="CUSTOMER REGISTRATION"
+                               style="-fx-font-size: 11px; -fx-font-weight: bold; -fx-text-fill: #8D285D;" />
+
+                        <Label text="Register a new individual customer."
+                               style="-fx-font-size: 11px; -fx-text-fill: #98758A;" />
+
+                        <Button fx:id="createCustomerBtn"
+                                text="Create Customer Account"
+                                onAction="#openCreateCustomer"
+                                maxWidth="Infinity"
+                                prefHeight="37"
+                                style="-fx-background-color: #8D285D; -fx-text-fill: white; -fx-font-size: 12px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-cursor: hand;" />
+
+                    </VBox>
+
+                    <VBox spacing="8"
+                          style="-fx-background-color: #FFF0F6; -fx-background-radius: 9; -fx-padding: 13; -fx-border-color: #F2D4E1; -fx-border-radius: 9;">
+
+                        <Label text="COMPANY REGISTRATION"
+                               style="-fx-font-size: 11px; -fx-font-weight: bold; -fx-text-fill: #8D285D;" />
+
+                        <Label text="Register a new business banking customer."
+                               style="-fx-font-size: 11px; -fx-text-fill: #98758A;" />
+
+                        <Button fx:id="createCompanyBtn"
+                                text="Create Company Account"
+                                onAction="#openCreateCompany"
+                                maxWidth="Infinity"
+                                prefHeight="37"
+                                style="-fx-background-color: #8D285D; -fx-text-fill: white; -fx-font-size: 12px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-cursor: hand;" />
+
+                    </VBox>
+
+                </VBox>
+
+                <Button text="Logout"
+                        onAction="#logout"
+                        maxWidth="480"
+                        prefHeight="39"
+                        style="-fx-background-color: #FFF0F5; -fx-text-fill: #8D285D; -fx-font-size: 13px; -fx-font-weight: bold; -fx-background-radius: 9; -fx-border-color: #E8D3DF; -fx-border-radius: 9; -fx-cursor: hand;" />
+
+            </VBox>
+
+        </StackPane>
+    </center>
+
+</BorderPane>
