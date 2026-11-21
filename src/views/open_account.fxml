@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/25"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.OpenAccountController"
+            prefWidth="620"
+            prefHeight="645"
+            style="-fx-background-color: #F8F5F8;">
+
+    <top>
+        <HBox alignment="CENTER_LEFT"
+              spacing="15"
+              prefHeight="68"
+              style="-fx-background-color: white; -fx-padding: 12 28; -fx-border-color: #F0E4EC; -fx-border-width: 0 0 1 0;">
+
+            <VBox spacing="2">
+                <Label text="SASHA BANK"
+                       style="-fx-font-size: 21px; -fx-font-weight: bold; -fx-text-fill: #8D285D;" />
+
+                <Label text="PERSONAL BANKING"
+                       style="-fx-font-size: 10px; -fx-text-fill: #A77B94;" />
+            </VBox>
+
+            <VBox alignment="CENTER_RIGHT"
+                  HBox.hgrow="ALWAYS"
+                  spacing="3">
+
+                <Label text="BANKING SERVICES"
+                       style="-fx-font-size: 10px; -fx-font-weight: bold; -fx-text-fill: #A77B94;" />
+
+                <Label text="Open New Account"
+                       style="-fx-font-size: 12px; -fx-text-fill: #563B4D;" />
+            </VBox>
+
+        </HBox>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true"
+                    hbarPolicy="NEVER"
+                    vbarPolicy="AS_NEEDED"
+                    style="-fx-background: #F8F5F8; -fx-background-color: #F8F5F8; -fx-border-color: transparent;">
+
+            <content>
+                <VBox alignment="TOP_CENTER"
+                      spacing="20"
+                      style="-fx-padding: 28 35 28 35;">
+
+                    <VBox spacing="7"
+                          maxWidth="Infinity"
+                          style="-fx-background-color: #8D285D; -fx-background-radius: 13; -fx-padding: 22 24;">
+
+                        <Label text="NEW BANK ACCOUNT"
+                               style="-fx-font-size: 10px; -fx-font-weight: bold; -fx-text-fill: #F8DCEB;" />
+
+                        <Label text="Your next financial step."
+                               wrapText="true"
+                               style="-fx-font-size: 23px; -fx-font-weight: bold; -fx-text-fill: white;" />
+
+                        <Label text="Open an additional Sasha Bank account in just a few steps."
+                               wrapText="true"
+                               style="-fx-font-size: 12px; -fx-text-fill: #FFE1EE;" />
+
+                    </VBox>
+
+                    <VBox spacing="18"
+                          maxWidth="Infinity"
+                          style="-fx-background-color: white; -fx-background-radius: 12; -fx-padding: 25; -fx-border-color: #F0E4EC; -fx-border-radius: 12;">
+
+                        <VBox spacing="6">
+
+                            <Label text="CREATE YOUR ACCOUNT"
+                                   style="-fx-font-size: 17px; -fx-font-weight: bold; -fx-text-fill: #432C3B;" />
+
+                            <Label text="Choose the account type that suits your banking needs."
+                                   wrapText="true"
+                                   style="-fx-font-size: 12px; -fx-text-fill: #98758A;" />
+
+                        </VBox>
+
+                        <VBox spacing="9">
+
+                            <Label text="ACCOUNT TYPE"
+                                   style="-fx-font-size: 11px; -fx-font-weight: bold; -fx-text-fill: #70445E;" />
+
+                            <ComboBox fx:id="accountTypeSelect"
+                                      promptText="Select an account type"
+                                      prefHeight="46"
+                                      maxWidth="Infinity"
+                                      style="-fx-background-color: #FFF9FC; -fx-background-radius: 9; -fx-border-color: #E8D3DF; -fx-border-radius: 9;" />
+
+                        </VBox>
+
+                        <VBox spacing="7"
+                              style="-fx-background-color: #FFF0F6; -fx-background-radius: 10; -fx-padding: 15 17;">
+
+                            <Label text="ACCOUNT INFORMATION"
+                                   style="-fx-font-size: 11px; -fx-font-weight: bold; -fx-text-fill: #8D285D;" />
+
+                            <Label text="Your new account will be linked to your existing Sasha Bank customer profile."
+                                   wrapText="true"
+                                   style="-fx-font-size: 12px; -fx-text-fill: #70445E;" />
+
+                        </VBox>
+
+                        <Button fx:id="createButton"
+                                text="Create Account"
+                                onAction="#handleCreate"
+                                maxWidth="Infinity"
+                                prefHeight="45"
+                                style="-fx-background-color: #8D285D; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 9; -fx-cursor: hand;" />
+
+                    </VBox>
+
+                    <Button text="Return to Dashboard"
+                            onAction="#goBack"
+                            maxWidth="Infinity"
+                            prefHeight="42"
+                            style="-fx-background-color: #FFF0F5; -fx-text-fill: #8D285D; -fx-font-size: 13px; -fx-font-weight: bold; -fx-background-radius: 9; -fx-border-color: #E8D3DF; -fx-border-radius: 9; -fx-cursor: hand;" />
+
+                </VBox>
+            </content>
+
+        </ScrollPane>
+    </center>
+
+</BorderPane>
